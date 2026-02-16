@@ -35,7 +35,7 @@ export default function Tech() {
               {items.map((tech, i) => (
                 <span
                   key={i}
-                  className="bg-[#2A2A2A] text-gray-300 px-3 py-1 rounded-md text-sm font-medium hover:bg-[#E8FF9B]/10 transition-colors"
+                  className="cursor-pointer bg-[#2A2A2A] text-gray-300 px-3 py-1 rounded-md text-sm font-medium hover:bg-[#E8FF9B]/10 transition-colors"
                 >
                   {tech}
                 </span>

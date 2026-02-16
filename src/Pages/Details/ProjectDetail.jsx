@@ -23,7 +23,7 @@ export default function ProjectDetail() {
       .then((data) => {
         const projectId = parseInt(id);
         const foundProject = data.find(p => p.id === projectId);
-        
+
         if (foundProject) {
           setProject(foundProject);
         } else {
@@ -87,7 +87,7 @@ export default function ProjectDetail() {
             <MdArrowBack className="text-lg" />
             <span>Back</span>
           </button>
-          
+
           <div className="flex justify-center items-center h-64">
             <div className="w-12 h-12 border-4 border-[var(--color-accent)]/20 border-t-[var(--color-accent)] rounded-full animate-spin" />
           </div>
@@ -107,7 +107,7 @@ export default function ProjectDetail() {
             <MdArrowBack className="text-lg" />
             <span>Back</span>
           </button>
-          
+
           <div className="text-center text-gray-400 py-20 bg-gradient-to-b from-[#1e1e1e] to-[#181818] rounded-2xl border border-[#2a2a2a]">
             <p className="text-6xl mb-4">😕</p>
             <p className="text-2xl mb-2">Project Not Found</p>
@@ -197,8 +197,8 @@ export default function ProjectDetail() {
                       onClick={() => setCurrentImageIndex(index)}
                       className={`
                         w-2 h-2 rounded-full transition-all duration-300
-                        ${index === currentImageIndex 
-                          ? 'bg-[var(--color-accent)] w-6' 
+                        ${index === currentImageIndex
+                          ? 'bg-[var(--color-accent)] w-6'
                           : 'bg-[var(--color-subtext)]'
                         }
                       `}
@@ -224,29 +224,34 @@ export default function ProjectDetail() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               {project.date && (
-                <div className="bg-[#242424] rounded-xl p-4 border border-[#323232] flex items-center gap-3">
-                  <div>
-                    <p className="text-xs text-gray-500">Date</p>
-                    <p className="text-sm text-white">{formatDate(project.date)}</p>
-                  </div>
+                <div className="bg-[#242424] rounded-xl p-4 border border-[#323232]">
+                  <p className="text-xs text-gray-500">Date</p>
+                  <p className="text-sm text-white flex items-center gap-2">
+                    <FaCalendarAlt className="text-[var(--color-accent)]" />
+                    {formatDate(project.date)}
+                  </p>
                 </div>
               )}
 
               {project.type && (
-                <div className="bg-[#242424] rounded-xl p-4 border border-[#323232] flex items-center gap-3">
-                  <div>
-                    <p className="text-xs text-gray-500">Project Type</p>
-                    <p className="text-sm text-white">{project.type}</p>
-                  </div>
+                <div className="bg-[#242424] rounded-xl p-4 border border-[#323232]">
+                  <p className="text-xs text-gray-500">Project Type</p>
+                  <p className="text-sm text-white flex items-center gap-2">
+                    <span className="text-[var(--color-accent)]">
+                      {getTypeIcon(project.type)}
+                    </span>
+                    {project.type}
+                  </p>
                 </div>
               )}
 
               {project.role && (
-                <div className="bg-[#242424] rounded-xl p-4 border border-[#323232] flex items-center gap-3">
-                  <div>
-                    <p className="text-xs text-gray-500">Role</p>
-                    <p className="text-sm text-white">{project.role}</p>
-                  </div>
+                <div className="bg-[#242424] rounded-xl p-4 border border-[#323232]">
+                  <p className="text-xs text-gray-500">Role</p>
+                  <p className="text-sm text-white flex items-center gap-2">
+                    <FaLaptopCode className="text-[var(--color-accent)]" />
+                    {project.role}
+                  </p>
                 </div>
               )}
             </div>
@@ -264,6 +269,20 @@ export default function ProjectDetail() {
                 <p className="text-gray-400 leading-relaxed">
                   {project.details}
                 </p>
+              </div>
+            )}
+
+            {project.keyFeatures && project.keyFeatures.length > 0 && (
+              <div className="mb-8">
+                <h2 className="text-white font-semibold text-lg mb-3">Key Features</h2>
+                <ul className="space-y-2">
+                  {project.keyFeatures.map((feature, index) => (
+                    <li key={index} className="text-gray-400 flex items-start gap-3">
+                      <span className="text-[var(--color-accent)] mt-1">•</span>
+                      <span className="text-gray-400 leading-relaxed">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
 

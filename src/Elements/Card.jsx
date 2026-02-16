@@ -1,6 +1,7 @@
 import Label from "./Label";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
+import { GoArrowUpRight } from "react-icons/go"
 
 export default function Card({
   title,
@@ -105,6 +106,7 @@ export default function Card({
 
             <Button
               text="Details"
+              icon={<GoArrowUpRight className="text-lg" />}
               onClick={handleDetails}
               variant="outline"
               size="sm"

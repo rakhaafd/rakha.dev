@@ -9,6 +9,7 @@
   { "name": "Python", "category": "Language" },
   { "name": "Git", "category": "DevOps" },
   { "name": "Docker", "category": "DevOps" },
+  { "name": "Digital Forensics", "category": "Cyber Security" },
   { "name": "Visual Studio Code", "category": "Tools" },
   { "name": "Postman", "category": "Tools" },
   { "name": "Linux", "category": "Operating System" },

@@ -2,7 +2,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Label from "../Elements/Label";
 import Button from "../Elements/Button";
-import { FaEnvelope, FaMapMarkerAlt, FaSpinner } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaSpinner, FaPaperPlane } from "react-icons/fa";
 
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -93,7 +93,7 @@ export default function Contact() {
               about tech, feel free to drop a message.
             </p>
 
-            <div className="space-y-4 pt-4">
+            <div className="cursor-pointer space-y-4 pt-4">
               <div className="flex items-center gap-4 p-4 bg-[#1e1e1e] rounded-xl border border-[#2a2a2a] hover:border-[var(--color-accent)]/30 transition-all duration-300 group">
                 <div className="p-3 bg-[#2a2a2a] rounded-lg group-hover:bg-[#2a2a2a]/80">
                   <FaEnvelope className="text-[var(--color-accent)]" />
@@ -179,7 +179,7 @@ export default function Contact() {
                 text={isLoading ? "Sending..." : "Send Message"}
                 type="submit"
                 disabled={isLoading}
-                icon={isLoading ? <FaSpinner className="text-lg animate-spin" /> : null}
+                icon={isLoading ? <FaSpinner className="text-lg animate-spin" /> : <FaPaperPlane className="text-lg" />}
                 className={`w-full justify-center mt-4 bg-[var(--color-accent)] text-black font-semibold py-3 rounded-xl transition-all duration-300 ${
                   isLoading 
                     ? "opacity-70 cursor-not-allowed" 

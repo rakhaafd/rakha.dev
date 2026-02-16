@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { MdOpenInNew, MdArrowBack } from "react-icons/md";
-import { FaCertificate, FaAward, FaUser, FaCalendarAlt, FaShieldAlt, FaLaptopCode, FaCheckCircle } from "react-icons/fa";
+import { FaCertificate, FaAward, FaUser, FaCalendarAlt, FaShieldAlt, FaLaptopCode, FaCheckCircle, FaBuilding, FaRegCalendarAlt } from "react-icons/fa";
 import Button from "../../Elements/Button";
 
 export default function CertificateDetail() {
@@ -48,9 +48,9 @@ export default function CertificateDetail() {
   };
 
   const getCategoryIcon = (category) => {
-    if (category.includes("Cyber Security")) return <FaShieldAlt />;
-    if (category.includes("Awarding")) return <FaAward />;
-    return <FaLaptopCode />;
+    if (category.includes("Cyber Security")) return <FaShieldAlt className="text-[var(--color-accent)]" />;
+    if (category.includes("Awarding")) return <FaAward className="text-[var(--color-accent)]" />;
+    return <FaLaptopCode className="text-[var(--color-accent)]" />;
   };
 
   const getImagePath = (imagePath) => {
@@ -144,20 +144,22 @@ export default function CertificateDetail() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               {certificate.issuer && (
-                <div className="bg-[#242424] rounded-xl p-4 border border-[#323232] flex items-center gap-3">
-                  <div>
-                    <p className="text-xs text-gray-500">Issuer</p>
-                    <p className="text-sm text-white">{certificate.issuer}</p>
-                  </div>
+                <div className="bg-[#242424] rounded-xl p-4 border border-[#323232]">
+                  <p className="text-xs text-gray-500 mb-1">Issuer</p>
+                  <p className="text-sm text-white flex items-center gap-2">
+                    <FaBuilding className="text-[var(--color-accent)]" />
+                    {certificate.issuer}
+                  </p>
                 </div>
               )}
 
               {certificate.date && (
-                <div className="bg-[#242424] rounded-xl p-4 border border-[#323232] flex items-center gap-3">
-                  <div>
-                    <p className="text-xs text-gray-500">Issued Date</p>
-                    <p className="text-sm text-white">{formatDate(certificate.date)}</p>
-                  </div>
+                <div className="bg-[#242424] rounded-xl p-4 border border-[#323232]">
+                  <p className="text-xs text-gray-500 mb-1">Issued Date</p>
+                  <p className="text-sm text-white flex items-center gap-2">
+                    <FaRegCalendarAlt className="text-[var(--color-accent)]" />
+                    {formatDate(certificate.date)}
+                  </p>
                 </div>
               )}
             </div>

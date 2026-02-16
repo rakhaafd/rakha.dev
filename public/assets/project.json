@@ -17,7 +17,14 @@
     "date": "2025/06/28",
     "type": "Team",
     "role": "FrontEnd Developer",
-    "status": "Finished"
+    "status": "Finished",
+    "keyFeatures": [
+      "Anonymous reporting with encrypted user identity protection",
+      "Public complaint submission with image evidence upload",
+      "Category-based filtering for organized issue tracking",
+      "Admin verification workflow for report validation",
+      "Real-time status updates (Pending, Verified, Resolved)"
+    ]
   },
   {
     "id": 2,
@@ -37,7 +44,14 @@
     "date": "2025/10/20",
     "type": "Team",
     "role": "FrontEnd Developer",
-    "status": "Finished"
+    "status": "Finished",
+    "keyFeatures": [
+      "Secure one-time voting system with vote validation",
+      "Student authentication with role-based access control",
+      "Candidate profile pages with vision and mission details",
+      "Real-time vote counting dashboard",
+      "Admin panel for election management and monitoring"
+    ]
   },
   {
     "id": 3,
@@ -57,7 +71,14 @@
     "date": "2026/01/13",
     "type": "Individual",
     "role": "Fullstack Developer",
-    "status": "Finished"
+    "status": "Finished",
+    "keyFeatures": [
+      "Create and publish technical articles with structured content",
+      "User authentication and personalized developer profiles",
+      "Interactive comment system for knowledge sharing",
+      "Search and filter articles by category",
+      "Follow system to connect with other developers"
+    ]
   },
   {
     "id": 4,
@@ -77,7 +98,14 @@
     "date": "2025/12/11",
     "type": "Individual",
     "role": "Fullstack Developer",
-    "status": "Finished"
+    "status": "Finished",
+    "keyFeatures": [
+      "CRUD-based inventory management system",
+      "Real-time stock tracking and updates",
+      "Item categorization and warehouse location management",
+      "Stock movement history logging",
+      "Admin dashboard with inventory reports"
+    ]
   },
   {
     "id": 5,
@@ -98,7 +126,15 @@
     "date": "2025/12/31",
     "type": "Individual",
     "role": "Fullstack Developer",
-    "status": "Finished"
+    "status": "Finished",
+    "keyFeatures": [
+      "Dual role system with Teacher and Student access control",
+      "Teachers can create scheduled activities for empty class sessions",
+      "Three activity types: Literacy & Practice Exercises, Practical Assignments, and Quick Quiz",
+      "Time-based activity availability according to scheduled class hours",
+      "Students can submit tasks within the assigned time window",
+      "Real-time activity monitoring and submission tracking using Supabase"
+    ]
   },
   {
     "id": 6,
@@ -118,6 +154,13 @@
     "date": "2025/09/02",
     "type": "Team",
     "role": "Fullstack Developer",
-    "status": "Finished"
+    "status": "Finished",
+    "keyFeatures": [
+      "Browse movies and TV series with dynamic filtering",
+      "User rating and review submission system",
+      "Comment section for audience interaction",
+      "AI-based chatbot for personalized recommendations",
+      "Search feature with keyword and category filtering"
+    ]
   }
 ]
