@@ -1,7 +1,7 @@
 import Button from "../Elements/Button";
 import { Head } from "../Elements/Head";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { GoArrowUpRight } from "react-icons/go"
+import { GoArrowUpRight } from "react-icons/go";
 
 export default function Hero() {
   const handleScroll = () => {
@@ -18,12 +18,18 @@ export default function Hero() {
     }
   };
 
+  const handleMouseClick = () => {
+    const section = document.querySelector("#about");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       id="home"
       className="min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-10 relative"
     >
-
       <div className="hidden md:flex absolute left-12 top-1/2 -translate-y-1/2 flex-col gap-4 z-10">
         <div className="w-px h-12 bg-[var(--color-accent)]/30 mx-auto mb-2"></div>
 
@@ -72,21 +78,21 @@ export default function Hero() {
           </span>
         </h4>
         <style jsx>{`
-  @keyframes wave {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-    60% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
-  }
-  
-  .animate-wave {
-    animation: wave 2.5s ease-in-out infinite;
-  }
-`}</style>
+          @keyframes wave {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(14deg); }
+            20% { transform: rotate(-8deg); }
+            30% { transform: rotate(14deg); }
+            40% { transform: rotate(-4deg); }
+            50% { transform: rotate(10deg); }
+            60% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
+          }
+          
+          .animate-wave {
+            animation: wave 2.5s ease-in-out infinite;
+          }
+        `}</style>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-[var(--color-accent)]">
           <Head />
@@ -98,7 +104,6 @@ export default function Hero() {
           <span className="text-[var(--color-accent)] font-medium"> Cybersecurity</span> to ensure every system
           I create is both powerful and secure.
         </p>
-
 
         <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-6 w-full sm:w-auto px-4">
           <Button
@@ -151,6 +156,41 @@ export default function Hero() {
           <div className="w-12 h-px bg-[var(--color-accent)]/30"></div>
         </div>
       </div>
+
+      <div 
+        onClick={handleMouseClick}
+        className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 cursor-pointer group z-20"
+      >
+        <div className="flex flex-col items-center gap-1 md:gap-2">
+          <div className="w-5 h-8 md:w-6 md:h-10 rounded-full border-2 border-[var(--color-accent)]/40 group-hover:border-[var(--color-accent)] transition-colors duration-300 flex justify-center">
+            <div className="w-1 h-1.5 md:w-1 md:h-2 bg-[var(--color-accent)] rounded-full mt-2 animate-scroll"></div>
+          </div>
+          <span className="text-[10px] md:text-xs text-white/60 group-hover:text-white transition-colors duration-300">
+            Scroll Down
+          </span>
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+          50% {
+            transform: translateY(6px);
+            opacity: 0.5;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+        
+        .animate-scroll {
+          animation: scroll 2s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 }
