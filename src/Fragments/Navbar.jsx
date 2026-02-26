@@ -51,7 +51,7 @@ export default function Navbar() {
         ? 'bg-[var(--color-bg)]/80 backdrop-blur-md shadow-lg shadow-[var(--color-accent)]/5' 
         : 'bg-[var(--color-bg)]/60 backdrop-blur-sm'
     }`}>
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
 
         <h1 
           onClick={() => navigate('/')}
