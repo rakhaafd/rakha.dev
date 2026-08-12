@@ -1,10 +1,8 @@
 import {
   SiNextdotjs,
   SiLaravel,
-  SiReact,
   SiGo,
   SiFrappe,
-  SiErpnext,
   SiMysql,
   SiPostgresql,
   SiMongodb,
@@ -16,7 +14,11 @@ import {
   SiDocker,
   SiPostman,
   SiLinux,
-  SiSupabase
+  SiSupabase,
+  SiAstro,
+  SiNestjs,
+  SiDuckdb,
+  SiNotion
 } from "react-icons/si";
 
 import { VscVscode } from "react-icons/vsc";
@@ -26,10 +28,8 @@ import { FaWindows, FaUserSecret } from "react-icons/fa";
 export const iconMap = {
   SiNextdotjs,
   SiLaravel,
-  SiReact,
   SiGo,
   SiFrappe,
-  SiErpnext,
   SiMysql,
   SiPostgresql,
   SiMongodb,
@@ -44,5 +44,9 @@ export const iconMap = {
   SiLinux,
   FaUserSecret,
   FaWindows,
-  VscVscode
+  VscVscode,
+  SiAstro,
+  SiNestjs,
+  SiDuckdb,
+  SiNotion
 };

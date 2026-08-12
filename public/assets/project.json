@@ -1,33 +1,6 @@
 [
   {
     "id": 1,
-    "title": "LaporinAja",
-    "description": "A public complaint platform with encrypted identities and a reward-based reporting system.",
-    "details": "LaporinAja is a civic-tech web application that allows users to report public facility issues securely with encrypted identities. The system includes categorized reports, image uploads, admin verification, and a point-based reward mechanism to encourage community participation and transparency.",
-    "image": [
-      "/assets/project/laporinaja.png",
-      "/assets/project/laporinaja2.png"
-    ],
-    "link": "https://laporinaja-phi.vercel.app/",
-    "github": "https://github.com/rakhaafd/laporinaja.git",
-    "technology": [
-      "React.js",
-      "Supabase"
-    ],
-    "date": "2025/06/28",
-    "type": "Team",
-    "role": "FrontEnd Developer",
-    "status": "Finished",
-    "keyFeatures": [
-      "Anonymous reporting with encrypted user identity protection",
-      "Public complaint submission with image evidence upload",
-      "Category-based filtering for organized issue tracking",
-      "Admin verification workflow for report validation",
-      "Real-time status updates (Pending, Verified, Resolved)"
-    ]
-  },
-  {
-    "id": 2,
     "title": "Pemilos Stemba 2025",
     "description": "A web-based voting system for the 2025 OSIS Chairperson and Vice Chairperson election.",
     "details": "A digital election platform developed for SMK Negeri 7 Semarang to manage the 2025 OSIS election process. It features candidate profiles, secure authentication, one-time voting validation, and real-time vote counting to ensure transparency and efficiency.",
@@ -43,7 +16,7 @@
     ],
     "date": "2025/10/20",
     "type": "Team",
-    "role": "FrontEnd Developer",
+    "role": "Fullstack Developer",
     "status": "Finished",
     "keyFeatures": [
       "Secure one-time voting system with vote validation",
@@ -51,6 +24,34 @@
       "Candidate profile pages with vision and mission details",
       "Real-time vote counting dashboard",
       "Admin panel for election management and monitoring"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Karang Taruna GEMASIX",
+    "description": "A company profile and information website for Karang Taruna GEMASIX with an integrated admin management system.",
+    "details": "Karang Taruna GEMASIX is a company profile and community information website built to showcase the organization's activities, programs, agendas, meeting documentation, and financial transparency. The platform includes an admin dashboard for managing organizational content and an NGL feature that allows users to submit anonymous messages, which can also be shared to Instagram.",
+    "image": [
+      "/assets/project/gemasix.png",
+      "/assets/project/gemasix2.png",
+      "/assets/project/gemasix3.png",
+      "/assets/project/gemasix4.png"
+    ],
+    "link": "https://gemasix.my.id",
+    "github": "https://github.com/rakhaafd/gemasix",
+    "technology": [
+      "Next.js",
+      "Firebase"
+    ],
+    "date": "2026/08/12",
+    "type": "Individual",
+    "role": "Fullstack Developer",
+    "status": "Finished",
+    "keyFeatures": [
+      "Company profile and organizational information",
+      "Admin dashboard for managing programs, agendas, meetings, and finances",
+      "Anonymous NGL message submission with Instagram sharing",
+      "Cloudinary-based image and media management"
     ]
   },
   {
@@ -63,7 +64,6 @@
       "/assets/project/naikkelas2.png",
       "/assets/project/naikkelas3.png"
     ],
-    "link": "https://naikkelas.my.id",
     "github": "https://github.com/rakhaafd/NaikKelas",
     "technology": [
       "Laravel API",
@@ -83,6 +83,33 @@
   },
   {
     "id": 4,
+    "title": "LaporinAja",
+    "description": "A public complaint platform with encrypted identities and a reward-based reporting system.",
+    "details": "LaporinAja is a civic-tech web application that allows users to report public facility issues securely with encrypted identities. The system includes categorized reports, image uploads, admin verification, and a point-based reward mechanism to encourage community participation and transparency.",
+    "image": [
+      "/assets/project/laporinaja.png",
+      "/assets/project/laporinaja2.png"
+    ],
+    "link": "https://laporinaja-phi.vercel.app/",
+    "github": "https://github.com/rakhaafd/laporinaja.git",
+    "technology": [
+      "React.js",
+      "Supabase"
+    ],
+    "date": "2025/06/28",
+    "type": "Team",
+    "role": "Fullstack Developer",
+    "status": "Finished",
+    "keyFeatures": [
+      "Anonymous reporting with encrypted user identity protection",
+      "Public complaint submission with image evidence upload",
+      "Category-based filtering for organized issue tracking",
+      "Admin verification workflow for report validation",
+      "Real-time status updates (Pending, Verified, Resolved)"
+    ]
+  },
+  {
+    "id": 5,
     "title": "DevShare",
     "description": "A developer community platform for sharing articles, learning, and connecting.",
     "details": "DevShare is a full-stack community platform where developers can publish technical articles, interact through comments, and build connections. It includes user authentication, profile management, and a structured content system to support collaborative learning.",
@@ -109,7 +136,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Inventrack",
     "description": "A web application for warehouse inventory management with item tracking and reporting features.",
     "details": "Inventrack is a web platform for warehouse inventory management that helps users track and organize items, monitor stock levels, and streamline warehouse operations. The system provides an easy-to-use interface for managing inventory efficiently and supports businesses in keeping their stock accurate and well-organized.",
@@ -133,33 +160,6 @@
       "Item categorization and warehouse location management",
       "Stock movement history logging",
       "Admin dashboard with inventory reports"
-    ]
-  },
-  {
-    "id": 6,
-    "title": "Cineview",
-    "description": "A movie and series rating platform with reviews and AI-based recommendations.",
-    "details": "Cineview is a movie and TV series rating website inspired by IMDb, allowing users to browse content, leave reviews, and interact through comments. It also integrates an AI-powered chatbot that provides personalized movie and series recommendations.",
-    "image": [
-      "/assets/project/cineview.png",
-      "/assets/project/cineview2.png"
-    ],
-    "link": "https://cineview-blush.vercel.app/",
-    "github": "https://github.com/rakhaafd/cineview/",
-    "technology": [
-      "JQuery",
-      "TailwindCSS"
-    ],
-    "date": "2025/09/02",
-    "type": "Team",
-    "role": "Fullstack Developer",
-    "status": "Finished",
-    "keyFeatures": [
-      "Browse movies and TV series with dynamic filtering",
-      "User rating and review submission system",
-      "Comment section for audience interaction",
-      "AI-based chatbot for personalized recommendations",
-      "Search feature with keyword and category filtering"
     ]
   }
 ]
