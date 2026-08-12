@@ -10,9 +10,19 @@
     "icon": "SiLaravel"
   },
   {
-    "name": "React",
+    "name": "Fiber (Go)",
     "category": "Framework",
-    "icon": "SiReact"
+    "icon": "SiGo"
+  },
+  {
+    "name": "Nest.js",
+    "category": "Framework",
+    "icon": "SiNestjs"
+  },
+  {
+    "name": "Astro",
+    "category": "Framework",
+    "icon": "SiAstro"
   },
   {
     "name": "MySQL",
@@ -33,6 +43,11 @@
     "name": "Supabase",
     "category": "Database",
     "icon": "SiSupabase"
+  },
+  {
+    "name": "DuckDB",
+    "category": "Database",
+    "icon": "SiDuckdb"
   },
   {
     "name": "JavaScript",
@@ -80,11 +95,6 @@
     "icon": "SiFrappe"
   },
   {
-    "name": "ERPNext",
-    "category": "Framework",
-    "icon": "SiErpnext"
-  },
-  {
     "name": "Visual Studio Code",
     "category": "Tools",
     "icon": "VscVscode"
@@ -93,6 +103,11 @@
     "name": "Postman",
     "category": "Tools",
     "icon": "SiPostman"
+  },
+  {
+    "name": "Notion",
+    "category": "Tools",
+    "icon": "SiNotion"
   },
   {
     "name": "Linux",
