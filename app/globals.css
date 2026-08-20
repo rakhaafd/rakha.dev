@@ -9,9 +9,6 @@
   --card: #ffffff;
   --card-foreground: #09090b;
 
-  --popover: #ffffff;
-  --popover-foreground: #09090b;
-
   --primary: #18181b;
   --primary-foreground: #fafafa;
 
@@ -21,21 +18,13 @@
   --muted: #f4f4f5;
   --muted-foreground: #71717a;
 
-  --accent: #f4f4f5;
-  --accent-foreground: #18181b;
-
   --destructive: #ef4444;
   --destructive-foreground: #fafafa;
 
   --border: #e4e4e7;
-  --input: #e4e4e7;
   --ring: #18181b;
 
   --radius: 0.5rem;
-
-  /* Subtle highlight amber/gold for links/accents like reference or pure monochrome */
-  --highlight: #d97706;
-  --highlight-foreground: #ffffff;
 }
 
 .dark {
@@ -44,9 +33,6 @@
 
   --card: #0c0c0e;
   --card-foreground: #f4f4f5;
-
-  --popover: #0c0c0e;
-  --popover-foreground: #f4f4f5;
 
   --primary: #fafafa;
   --primary-foreground: #18181b;
@@ -57,18 +43,11 @@
   --muted: #141416;
   --muted-foreground: #a1a1aa;
 
-  --accent: #1c1c1f;
-  --accent-foreground: #fafafa;
-
   --destructive: #7f1d1d;
   --destructive-foreground: #fafafa;
 
   --border: #1f1f23;
-  --input: #1f1f23;
   --ring: #d4d4d8;
-
-  --highlight: #fbbf24;
-  --highlight-foreground: #09090b;
 }
 
 @theme inline {
@@ -81,9 +60,6 @@
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
 
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
 
@@ -93,18 +69,11 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
 
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
 
   --color-border: var(--border);
-  --color-input: var(--input);
   --color-ring: var(--ring);
-
-  --color-highlight: var(--highlight);
-  --color-highlight-foreground: var(--highlight-foreground);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -119,6 +88,8 @@
 
   html {
     scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
@@ -129,11 +100,38 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
+    line-height: 1.6;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  /* Heading hierarchy */
+  h1 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  h2 {
     font-family: var(--font-serif);
     letter-spacing: -0.015em;
+    line-height: 1.25;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+  }
+
+  /* Paragraph readability */
+  p {
+    line-height: 1.7;
+  }
+
+  /* Consistent focus ring */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
   }
 
   ::selection {

@@ -65,11 +65,6 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 <h1 className="font-serif text-3xl sm:text-4xl font-medium text-foreground tracking-tight">
                   {project.title}
                 </h1>
-                {project.type && (
-                  <Badge variant="outline" className="text-xs">
-                    {project.type}
-                  </Badge>
-                )}
               </div>
 
               {project.role && (
