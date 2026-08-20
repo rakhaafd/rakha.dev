@@ -54,18 +54,18 @@ export function HeroSection() {
         <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-foreground">
           Rakha Fausta Adinata Raharja
         </h1>
-        <p className="text-base sm:text-lg text-muted-foreground font-sans">
-          Software Engineer Wannabe.
+        <p className="text-base sm:text-lg italic text-muted-foreground font-sans">
+          Software Engineer <span className="font-medium">Wannabe.</span>
         </p>
       </div>
 
       {/* Narrative Bio */}
-      <p className="text-sm sm:text-base text-muted-foreground/90 leading-relaxed max-w-2xl font-sans">
+      <p className="text-sm sm:text-base text-muted-foreground/90 leading-relaxed max-w-3xl font-sans">
         Specializing in modern fullstack ecosystems with{" "}
-        <span className="text-foreground font-medium border-b border-border/70 pb-0.5">
-          Next.js, TypeScript, Golang, and Laravel
+        <span className="text-foreground font-medium underline decoration-foreground/25 decoration-1.5 underline-offset-4">
+          Next.js, Golang, Laravel, and ERP Technologies
         </span>
-        . Passionate about software architecture, clean APIs, and elegant user interfaces.
+        . Passionate about software architecture, and scalable system.
       </p>
 
       {/* Social Links */}

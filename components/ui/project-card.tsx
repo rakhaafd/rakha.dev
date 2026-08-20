@@ -25,11 +25,6 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
             >
               {project.title}
             </Link>
-            {project.type && (
-              <Badge variant="outline" className="text-[10px] px-1.5 py-0">
-                {project.type}
-              </Badge>
-            )}
           </div>
           {project.role && (
             <p className="text-xs sm:text-sm text-muted-foreground font-serif">
