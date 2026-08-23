@@ -18,7 +18,7 @@ export async function SkillsSection() {
         {skillGroups.map((group) => (
           <div
             key={group.category}
-            className="rounded-lg border border-border/70 bg-card p-5 space-y-4 hover:border-foreground/20 hover:bg-secondary/20 transition-colors duration-150"
+            className="rounded-lg border border-border/70 bg-card p-5 space-y-4 hover:border-foreground/20 hover:bg-secondary/20 transition-colors duration-150 cursor-pointer"
           >
             <div className="flex items-center justify-between border-b border-border/40 pb-2.5">
               <h3 className="font-serif text-base font-medium text-foreground">
