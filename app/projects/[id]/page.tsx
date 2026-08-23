@@ -8,6 +8,7 @@ import { ImageCarousel } from "@/components/ui/image-carousel";
 import { ArrowLeft, ArrowUpRight, ExternalLink, Calendar, User, Tag } from "lucide-react";
 import { getProjectById, getProjectsFromNotion } from "@/lib/notion";
 import { FaGithub, FaGlobe } from "react-icons/fa6";
+import { NotionText } from "@/components/ui/notion-text";
 
 // Revalidate Notion data every 60 seconds (ISR)
 export const revalidate = 60;
@@ -37,17 +38,15 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
     notFound();
   }
 
-  // Combine images array or single image fallback
+  // Combine single image and images array if present
   const projectImages = project.images && project.images.length > 0
     ? project.images
-    : project.image
-    ? [project.image]
-    : [];
+    : (project.image ? [project.image] : []);
 
   return (
     <MainLayout>
-      <div className="space-y-8 pt-4 sm:pt-8 max-w-3xl mx-auto">
-        {/* Navigation & Back Button */}
+      <div className="space-y-8 pt-4 sm:pt-8 max-w-4xl mx-auto">
+        {/* Back Button */}
         <div>
           <Button asChild variant="ghost" size="sm" className="gap-2 text-xs -ml-2 text-muted-foreground hover:text-foreground">
             <Link href="/projects">
@@ -57,47 +56,51 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </Button>
         </div>
 
-        {/* Project Header Info */}
-        <div className="space-y-4 border-b border-border/60 pb-6">
+        {/* Header Title & Role */}
+        <div className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="space-y-1">
-              <div className="flex flex-wrap items-center gap-2.5">
-                <h1 className="font-serif text-3xl sm:text-4xl font-medium text-foreground tracking-tight">
-                  {project.title}
-                </h1>
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-foreground">
+                {project.title}
+              </h1>
+              <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground font-serif pt-1">
+                {project.role && (
+                  <span className="flex items-center gap-1.5">
+                    <User className="h-3.5 w-3.5 text-muted-foreground/70" />
+                    <span>{project.role}</span>
+                  </span>
+                )}
+                {project.type && (
+                  <span className="flex items-center gap-1.5">
+                    <Tag className="h-3.5 w-3.5 text-muted-foreground/70" />
+                    <span>{project.type}</span>
+                  </span>
+                )}
               </div>
-
-              {project.role && (
-                <p className="text-md text-muted-foreground font-serif pt-1">
-                  Role: <span className="text-foreground">{project.role}</span>
-                </p>
-              )}
             </div>
 
             {/* External Links */}
             <div className="flex items-center gap-2">
               {project.github && (
-            <Link
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-1.5 rounded-md border border-border/50 text-muted-foreground hover:text-foreground hover:border-border hover:bg-secondary transition-colors duration-150"
-              aria-label="View Source Code"
-              title="GitHub Source"
-            >
-              <FaGithub className="h-4 w-4" />
-            </Link>
-          )}
-          {project.link && (
-            <Link
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-border/50 text-xs text-muted-foreground hover:text-foreground hover:border-border hover:bg-secondary transition-colors duration-150"
-            >
-              <FaGlobe className="h-4.75 w-3.75" />
-            </Link>
-          )}
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-border/50 text-xs text-muted-foreground hover:text-foreground hover:border-border hover:bg-secondary transition-colors duration-150"
+                >
+                  <FaGithub className="h-4 w-4" />
+                </Link>
+              )}
+              {project.link && (
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-border/50 text-xs text-muted-foreground hover:text-foreground hover:border-border hover:bg-secondary transition-colors duration-150"
+                >
+                  <FaGlobe className="h-4 w-4" />
+                </Link>
+              )}
             </div>
           </div>
 
@@ -130,7 +133,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               Overview
             </h2>
             <p className="text-base text-muted-foreground leading-relaxed font-sans">
-              {project.description}
+              <NotionText segments={project.descriptionSegments} fallback={project.description} />
             </p>
           </div>
 
@@ -140,7 +143,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 Project Details & Features
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground/90 leading-relaxed font-sans whitespace-pre-line">
-                {project.details}
+                <NotionText segments={project.detailsSegments} fallback={project.details} />
               </p>
             </div>
           )}

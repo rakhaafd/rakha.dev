@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import { CertificateItem } from "@/lib/notion";
 import { cn } from "@/lib/utils";
+import { NotionText } from "@/components/ui/notion-text";
 
 interface CertificateCardProps {
   certificate: CertificateItem;
@@ -53,7 +54,7 @@ export function CertificateCard({ certificate, className }: CertificateCardProps
 
       {certificate.details && (
         <p className="hidden sm:block text-sm text-muted-foreground/80 leading-relaxed font-sans border-t border-border/30 pt-2.5">
-          {certificate.details}
+          <NotionText segments={certificate.detailsSegments} fallback={certificate.details} />
         </p>
       )}
     </Card>

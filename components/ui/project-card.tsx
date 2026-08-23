@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { ProjectItem } from "@/lib/notion";
 import { cn } from "@/lib/utils";
 import { FaGithub, FaGlobe } from "react-icons/fa6";
+import { NotionText } from "@/components/ui/notion-text";
 
 interface ProjectCardProps {
   project: ProjectItem;
@@ -63,8 +64,8 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
       </div>
 
       {/* Description */}
-      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-        {project.description}
+      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed font-sans">
+        <NotionText segments={project.descriptionSegments} fallback={project.description} />
       </p>
 
       {/* Card Footer: Tech Stack Chips & Details Button */}
